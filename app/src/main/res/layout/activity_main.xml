@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/divide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mult"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/multiply"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/subtract"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/mult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/divide"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mult" />
+
+    <EditText
+        android:id="@+id/secondNum"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="343dp"
+        android:ems="10"
+        android:hint="@string/second_num"
+        android:inputType="textPersonName"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstNum"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/firstNum"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginBottom="343dp"
+        android:ems="10"
+        android:hint="@string/type_first_number"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+
+        android:text="@string/first_num"
+        android:autofillHints="First num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/plus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
