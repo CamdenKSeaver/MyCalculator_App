@@ -7,107 +7,125 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="154dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="34dp"
+        android:ems="10"
+        android:hint="@string/number"
+        android:inputType="textPersonName"
+        android:text="@string/empty"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/number"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/mult"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="388dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="105dp"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="findProduct"
         android:text="@string/multiply"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/add" />
 
     <Button
         android:id="@+id/sub"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="88dp"
+        android:onClick="findSub"
+        android:backgroundTint="@color/orange"
         android:text="@string/subtract"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/mult"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add" />
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/number2"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="105dp"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="findDiv"
         android:text="@string/divide"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mult" />
-
-    <EditText
-        android:id="@+id/secondNum"
-        android:layout_width="127dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="344dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="343dp"
-        android:ems="10"
-        android:hint="@string/second_num"
-        android:inputType="textPersonName"
-
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/firstNum"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/firstNum"
-        android:layout_width="127dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="343dp"
-        android:layout_marginBottom="343dp"
-        android:ems="10"
-        android:hint="@string/type_first_number"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textSize="20sp"
-
-        android:text="@string/first_num"
-        android:autofillHints="First num"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        />
+        app:layout_constraintStart_toEndOf="@+id/mult"
+        app:layout_constraintTop_toBottomOf="@+id/sub" />
 
     <Button
         android:id="@+id/add"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="88dp"
+        android:onClick="findSum"
+        android:backgroundTint="@color/orange"
         android:text="@string/plus"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/sub"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mult"
+        app:layout_constraintEnd_toStartOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="153dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="22dp"
+        android:ems="10"
+        android:hint="@string/number"
+        android:inputType="number"
+        android:text="@string/empty"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toStartOf="@+id/number2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="123dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="224dp"
+        android:text="Answer"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
