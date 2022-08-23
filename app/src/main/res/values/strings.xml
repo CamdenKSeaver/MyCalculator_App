@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCalculatorApp</string>
+    <string name="app_name">Not Very Complex Calculator</string>
     <string name="type_first_number">Type First Number</string>
     <string name="first_num">First Num</string>
     <string name="plus">+</string>
