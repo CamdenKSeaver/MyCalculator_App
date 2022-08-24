@@ -9,5 +9,6 @@
     <string name="multiply">×</string>
     <string name="number">Number</string>
     <string name="empty" />
+    <string name="power">^</string>
 
 </resources>
