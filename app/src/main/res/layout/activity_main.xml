@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <Button
+        android:id="@+id/cos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="71dp"
+        android:text="Cos"
+        android:onClick="findCos"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/sub" />
+
     <EditText
         android:id="@+id/number2"
         android:layout_width="154dp"
@@ -16,7 +32,7 @@
         android:layout_marginEnd="34dp"
         android:ems="10"
         android:hint="@string/number"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:text="@string/empty"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/sub"
@@ -98,6 +114,7 @@
 
     <EditText
         android:id="@+id/number"
+
         android:layout_width="153dp"
         android:layout_height="130dp"
         android:layout_marginStart="34dp"
@@ -105,9 +122,11 @@
         android:layout_marginEnd="22dp"
         android:ems="10"
         android:hint="@string/number"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:text="@string/empty"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="40sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/add"
         app:layout_constraintEnd_toStartOf="@+id/number2"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,18 +166,45 @@
         tools:ignore="OnClick,UsingOnClickInXml" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="349dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="3dp"
-        android:text="Click to change background"
-        android:onClick="setColor"
-        app:layout_constraintBottom_toTopOf="@+id/sub"
-        app:layout_constraintEnd_toStartOf="@+id/number2"
+        android:id="@+id/Sin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="71dp"
+        android:text="Sin"
+        android:onClick="findSin"
+        app:layout_constraintBottom_toTopOf="@+id/mult"
+        app:layout_constraintEnd_toStartOf="@+id/result"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number" />
+        app:layout_constraintTop_toBottomOf="@+id/add" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:text="First Number"
+        app:layout_constraintBottom_toTopOf="@+id/mult"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sin" />
+
+    <TextView
+        android:id="@+id/hint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="52dp"
+        android:text="Second Number"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/cos" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

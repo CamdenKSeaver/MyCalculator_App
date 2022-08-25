@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
             makeToast("Enter Numbers Into Textbox");
         }
         else{
-            double num1 = Integer.parseInt((number1ET.getText().toString()));
-            double num2 = Integer.parseInt((number2ET.getText().toString()));
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = num1 + num2;
 
             numberSumTV.setText("" + sum);
@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
             makeToast("Enter Numbers Into Textbox");
         }
         else{
-            double num1 = Integer.parseInt((number1ET.getText().toString()));
-            double num2 = Integer.parseInt((number2ET.getText().toString()));
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = num1 - num2;
 
             numberSumTV.setText("" + sum);
@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
             makeToast("Enter Numbers Into Textbox");
         }
         else{
-            double num1 = Integer.parseInt((number1ET.getText().toString()));
-            double num2 = Integer.parseInt((number2ET.getText().toString()));
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = num1 * num2;
 
             numberSumTV.setText("" + sum);
@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
             makeToast("Enter Numbers Into Textbox");
         }
         else{
-            double num1 = Integer.parseInt((number1ET.getText().toString()));
-            double num2 = Integer.parseInt((number2ET.getText().toString()));
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = num1 / num2;
 
             numberSumTV.setText("" + sum);
@@ -105,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
                 makeToast("Enter Numbers Into Textbox");
 }
             else{
-            double num1 = Integer.parseInt((number1ET.getText().toString()));
-            double num2 = Integer.parseInt((number2ET.getText().toString()));
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = Math.pow(num1, num2);
 
             numberSumTV.setText("" + sum);
@@ -116,13 +116,52 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    //https://stackoverflow.com/questions/5280367/android-generate-random-color-on-click
     public void setColor(View view){
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         view.setBackgroundColor(color);
     }
 
+    public void findSin(View view) {
+        EditText number1ET = findViewById(R.id.number);
+        EditText number2ET = findViewById(R.id.number2);
+        TextView numberSumTV = findViewById(R.id.result);
+        if (number1ET.getText().toString().equals("")|| number2ET.getText().toString().equals("")){
+            makeToast("Enter Numbers Into Textbox");
+        }
+        else{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double sum = Math.sin(num1);
+
+            numberSumTV.setText("" + sum);
+            setColor(view);
+        }
+
+
+
+    }
+    public void findCos(View view) {
+        EditText number1ET = findViewById(R.id.number);
+        EditText number2ET = findViewById(R.id.number2);
+        TextView numberSumTV = findViewById(R.id.result);
+        if (number1ET.getText().toString().equals("")|| number2ET.getText().toString().equals("")){
+            makeToast("Enter Numbers Into Textbox");
+        }
+        else{
+            double num1 = Double.parseDouble((number1ET.getText().toString()));
+            double num2 = Double.parseDouble((number2ET.getText().toString()));
+            double sum = Math.cos(num2);
+
+
+            numberSumTV.setText("" + sum);
+            setColor(view);
+        }
+
+
+
+    }
 
 
 
